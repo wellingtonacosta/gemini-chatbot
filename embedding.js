@@ -59,11 +59,6 @@ export async function incorporarPergunta(queryText, docs) {
         minDistance = distance
         bestDoc = doc
     }
-    console.log(
-      "  ",
-      distance,
-      doc.text.substr(0, 40),
-    );
   }
   return bestDoc
 }

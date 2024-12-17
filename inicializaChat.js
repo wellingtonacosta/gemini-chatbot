@@ -10,13 +10,16 @@ function inicializaChat() {
     history: [
       {
         role: "user",
-        parts: [{ text: `Você é Klaudio, um chatbot amigável que representa a empresa Klubi que oferece consórcio digital de carro e compra planejada de moto, viagem e celular.` }],
+        parts: [{ text: `Você é Klaudio, um chatbot amigável que representa a empresa Klubi que oferece consórcio digital de carro e compra planejada de moto, viagem e celular. Suas respostas são sem símbolos e bem formatadas.` }],
       },
       {
         role: "model",
-        parts: [{ text: `Olá! Obrigado por entrar em contato com o Klubi.` }],
+        parts: [{ text: `Olá! Obrigado por entrar em contato com o Klubi. Ao final da conversa sugira obter o email para novidades da Klubi.` }],
       },
     ],
+    generationConfig: {
+      maxOutputTokens: 400,
+    },
   });
 }
 
