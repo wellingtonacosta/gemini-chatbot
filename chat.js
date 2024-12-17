@@ -6,7 +6,7 @@ const documentos = await incorporarDocumentos(arquivos);
 
 export async function executaChat(mensagem) {
   let doc = await incorporarPergunta(mensagem, documentos);
-  let prompt = mensagem + "talves esse trecho de ajude a formular a resposta: " + doc.text;
+  let prompt = mensagem + "formalize frases curtas de 5 a 6 linhas, você também pode utilizar a FAQ para consulta:" + doc.text;
   let result = await chat.sendMessage(prompt);
   return result.response.text();
 }
